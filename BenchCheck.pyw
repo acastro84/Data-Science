@@ -16,6 +16,9 @@ can be imported to a Google Doc, or used as is to provide quick access to a
 manufacturer's products for a reseller, without having to visit a manufactuer's
 website in real time.
 
+The script was compiled into a Windows application using Pyinstaller, and can
+be used on any recent Windows operating system with minimal installation needed.
+
 Usage instructions:
 The script is located inside the "dist" folder. Copy or move script to the folder
 you wish to have your excel documents generated in.  Doubleclick script to run silently.
