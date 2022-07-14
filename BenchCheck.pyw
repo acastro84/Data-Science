@@ -11,7 +11,7 @@ immediate shipment.  It searches for a predetermined list of product names
 on a manufacturer's Ecommerce website, to determine the availability of these
 products for a reseller.
 
-The script generates an Excel file to hold product informaiton.  This file
+The script generates an Excel file to hold product information.  This file
 can be imported to a Google Doc, or used as is to provide quick access to a
 manufacturer's products for a reseller, without having to visit a manufactuer's
 website in real time.
