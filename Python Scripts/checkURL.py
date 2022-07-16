@@ -39,7 +39,7 @@ pbar = ProgressBar()
 #paste the ID here if the original link ID expires or is changed. 
 googleSheetId = "InsertGoogleSheetIDHere"
 
-worksheetName = "SkuLinks"
+worksheetName = "SheetWorkNameHere"
 
 
 URL = 'https://docs.google.com/spreadsheets/d/{0}/gviz/tq?tqx=out:csv&sheet={1}'.format(googleSheetId, worksheetName)
@@ -55,7 +55,7 @@ existsArr = []
 prefixURL  = r"https://prefixedWebsitehere.com"
 df2Range = len(df2)
 
-for i in pbar(range(df2Range)):
+for i in pbar(range(df2Range)):     #Uses pbar to display % on loop for large datasets.
     try:
         suffix = str(df2[i])
         suffix = suffix.strip("'")
