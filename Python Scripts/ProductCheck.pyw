@@ -3,7 +3,7 @@ File Name: BechCheck.pyw
 Author: Armando Castro
 Created on : 7.13.2022
 
-License restrictions: Restricted for use only to WildlifeWonders.com staff.
+License restrictions: Restricted for use only to select e-commerce staff.
 
 README:
 This script determines if a manufacturer's products are available for
@@ -48,7 +48,7 @@ from tqdm import tqdm
 #paste the ID here if the original link ID expires or is changed. 
 googleSheetId = "InsertGoogleSheetIDHere"
 
-worksheetName = "BenchLinks"
+worksheetName = "WorkSheetNameHere"
 
 
 URL = 'https://docs.google.com/spreadsheets/d/{0}/gviz/tq?tqx=out:csv&sheet={1}'.format(googleSheetId, worksheetName)
@@ -64,19 +64,19 @@ df = df.dropna(how='all', axis='columns')
 df = df.drop(df.columns[[4,5,6]], axis=1)
 
 linkArr = []
-wildlifeArr = []
+EcommmerceNameArr = []
 availArr = []
 matsArr = []
-for i in df["Painted Sky Link"]:
+for i in df["InsertResellerDataFrameColumnNameHere"]:
     linkArr.append(i)   #Pull links of products from source for BS4
 
 
 #Search for substring in reseller URL to determine materials used to make
 #the current product we are searching for. 
-for i in df["WildlifeWondersLink"]:
-    wildlifeLink = str(i)
-    wildlifeArr.append(wildlifeLink)
-    if wildlifeLink.find("2-tone") != -1:
+for i in df["InsertE-CommerceDataFrameColumnNameHere"]:
+    EcommerceNameLink = str(i)
+    EcommmerceNameArr.append(wildlifeLink)
+    if EcommerceNameLink.find("2-tone") != -1:
         matWord = "2-Tone"
     else:
         matWord = "Cast Iron"
@@ -100,7 +100,7 @@ for i in linkArr:
         availArr.append("Available")
 
 df2 = pd.DataFrame(availArr, columns=['Available?'])
-df3 = pd.DataFrame(matsArr, columns=['2-Tone or Cast Iron'])
+df3 = pd.DataFrame(matsArr, columns=['MaterialTypes'])
 
 frames = [df, df2, df3] 
 result = pd.concat(frames, axis=1) #combine all dataframes into 1 dataframe 
@@ -117,4 +117,4 @@ fileName = userName + '-' + '-' + addDate + '.' + fixed_current_time + '.xlsx'
 
 with pd.ExcelWriter(str(fileName)) as writer:
     df.to_excel(writer, sheet_name='Original', index=False)
-    result.to_excel(writer, sheet_name='Available Benches', index=False)
+    result.to_excel(writer, sheet_name='Available Products', index=False)
