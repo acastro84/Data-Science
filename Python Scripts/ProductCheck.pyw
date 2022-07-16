@@ -75,11 +75,11 @@ for i in df["InsertResellerDataFrameColumnNameHere"]:
 #the current product we are searching for. 
 for i in df["InsertE-CommerceDataFrameColumnNameHere"]:
     EcommerceNameLink = str(i)
-    EcommmerceNameArr.append(wildlifeLink)
-    if EcommerceNameLink.find("2-tone") != -1:
-        matWord = "2-Tone"
+    EcommmerceNameArr.append(EcommerceNameLink)
+    if EcommerceNameLink.find("searchStringHere) != -1:
+        matWord = "SearchStringLabelHere"
     else:
-        matWord = "Cast Iron"
+        matWord = "AltSearchStringLabelHere"
     matsArr.append(matWord) #New column created with materials used. Allows for
     #sorting of entire spreadsheet by product materials. (Price difference between
     #the two).
