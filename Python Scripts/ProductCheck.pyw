@@ -1,5 +1,5 @@
 """
-File Name: BechCheck.pyw
+File Name: ProductCheck.pyw
 Author: Armando Castro
 Created on : 7.13.2022
 
