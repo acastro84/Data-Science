@@ -46,7 +46,7 @@ from tqdm import tqdm
 
 #Taken from the original Google sheet copy link.  Must create a new link and
 #paste the ID here if the original link ID expires or is changed. 
-googleSheetId = "1-YM9-Vhj7pWekStgABEyXO5Xbb3viXNCEBENSRuJdpk"
+googleSheetId = "InsertGoogleSheetIDHere"
 
 worksheetName = "BenchLinks"
 
